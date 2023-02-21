@@ -1,0 +1,121 @@
+.focus{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    background-color:rgba(0,0,0,0.7);
+    z-index:13;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    flex-direction:column;
+}
+
+.hidden{
+    display:none;
+}
+
+.f_content{
+    position:relative;
+    top:3rem;
+}
+
+.centerImg{
+    width:32vw;
+    height:57vh;
+    overflow:hidden;
+    border-radius:0.6rem;
+}
+
+.centerImg > img{
+    width:100%;
+}
+
+/* radio */
+.radio{
+    display:flex;
+    gap:1.9rem;
+    align-items:center;
+    padding:1.1rem 0.7rem;
+    width:100%;
+    justify-content:center;
+}
+
+.of_images img{
+    width:100%;
+}
+
+.radio li{
+    list-style:none;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    object-fit:cover;
+}
+.radio li::after{
+    content:"";
+    background-color:white;
+    opacity:0;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:2px;
+    left:0;
+    border-radius:0.3rem;
+}
+
+.of_images:hover::after{
+    opacity:0.5;
+    border:2px solid hsl(26, 100%, 55%);
+}
+
+.radio li img{
+    width:4rem;
+    height:4rem;
+    border-radius:0.4rem;
+}
+
+/* Close */
+.close-icon {
+    color:white;
+    font-size:1rem;
+    font-weight:900;
+    position:relative;
+    top:5.2rem;
+    left:13rem;
+    display:inline-block;
+    max-width:1.5rem;
+    cursor:pointer;
+    transform-origin:center;
+}
+
+.close-icon:hover{
+    color: hsl(26, 100%, 55%);
+}
+
+.next{
+    stroke:rgb(100, 100, 100);
+    padding:0.6rem;
+    background-color:white;
+    border-radius:50%;
+    width:0.7rem;
+    position:relative;
+    top:15rem;
+    z-index: 11;
+    transition:all 200ms ease-in;
+    cursor:pointer;
+}
+
+.next:hover{
+    background-color:rgb(151, 151, 151);
+}
+
+.forward{
+    right:-14.5rem;
+    transition:all 300ms ease-in;
+}
+
+.backwards{
+    right:14.5rem;
+}

@@ -1,0 +1,62 @@
+.left{
+    display:flex;
+    flex-direction:column;
+    transform:translateY(2rem);
+    overflow: hidden;
+    position:relative;
+}
+
+.main_image{
+    height:55vh;
+    overflow:hidden;
+    object-fit:contain;
+    width:100%;
+    border-radius:0.7rem;
+    cursor:pointer;
+}
+
+.main_image>img{
+    width:100%;
+    border-radius:0.7rem;
+}
+
+.select{
+    width:100%;
+    display:flex;
+    max-width:100%;
+    padding:1rem 0;
+    gap:2.7rem;
+    justify-content:center;
+}
+
+.selector{
+    width:4rem;
+    max-height:4rem;
+    border-radius:0.5rem;
+    /* padding-inline:0.3rem; */
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    
+}
+
+.selector::after{
+    content:"";
+    background-color:white;
+    opacity:0;
+    width:150%;
+    height:150%;
+    position:absolute;
+    top:0;
+    right:0;
+    transition:opacity 300ms ease-in;
+}
+
+.selector:hover::after{
+    opacity:0.5;
+}
+
+.selector>img{
+    width:5.2rem;
+    border-radius:0.5rem;
+}

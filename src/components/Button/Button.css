@@ -1,0 +1,61 @@
+.b_button{
+    display:flex;
+    align-items:center;
+    gap:1.8rem;
+}
+
+/* ........Left button........ */
+
+.b_left{
+    width:max-content;
+    background-color:hsl(223, 64%, 98%);
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    padding:0.7rem 0.5rem;
+    overflow:hidden;
+    border-radius:0.4rem;
+}
+
+.add, .subtract{
+    border:none;
+    background-color:hsl(223, 64%, 98%);
+    padding:0.4rem;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+}
+.count{
+    padding-inline:0.5rem;
+    font-weight:600;
+    max-width:0.6rem;
+    min-width:0.6rem;
+}
+
+/* ........right button........... */
+.b_right{
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    background-color:hsl(25.94,100%,55.1%);
+    height:1.5rem;
+    padding:0.7rem 3.4rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+    transition:all 300ms ease-in;
+}
+
+.b_right:hover{
+    background-color: hsl(25, 87%, 78%);
+}
+
+.b_right > h4{
+    color:white;
+    font-size:0.8rem;
+}
+
+.b_cart_icon{
+    font-weight:400;
+    color:white;
+    transition:all 400ms ease-in;
+}

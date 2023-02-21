@@ -1,0 +1,68 @@
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    position:relative;
+    /* background-color:red; */
+    gap:7rem;
+}
+
+/* hero content */
+.right{
+    width:90%;
+    overflow:hidden;
+    position:relative;
+    /* top:2rem; */
+}
+
+.company_name{
+    color:hsl(26, 100%, 55%);
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+.h_title{
+    font-weight:700;
+    color:#181717;
+    font-size:2.5rem;
+    margin:0.5rem 0 1.5rem 0;
+}
+
+.h_info{
+    color:hsl(221, 11%, 71%);
+    font-size:1rem;
+}
+
+.price{
+    font-weight:700;
+    font-size:1.5rem;
+}
+
+.values{
+    display:flex;
+    /* justify-content:space-between; */
+    align-items:center;
+    gap:1.2rem;
+    position:relative;
+    top:-1rem;
+}
+
+.discount{
+    background-color:hsl(25, 100%, 94%);
+    opacity:0.8;
+    padding:0.3rem;
+    color:hsl(26, 100%, 55%);
+    font-size:0.9rem;
+}
+
+.initial_price{
+    font-size:1rem;
+    font-weight:700;
+    position:relative;
+    top:-2.7rem;
+    color:hsl(220, 14%, 75%);
+}
+
+
+
+
