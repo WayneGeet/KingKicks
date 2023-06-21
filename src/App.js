@@ -3,24 +3,20 @@ import './App.css';
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Navbar from "./components/Navbar/Navbar";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { RestaurantProvider } from "./Context";
+import {ToggleProvider} from "./Context"
 
 
 function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <RestaurantProvider>
-          <Routes>
-            {/* <Nav/> */}
-            <Route path="/" element={<Home/>} />
-            <Route path="contact" element={<Contact/>}/>
-            <Route path="about" element={<About/>}/>
-          </Routes>
-        </RestaurantProvider>
-      </BrowserRouter>
+      <ToggleProvider>
+        {/* <Navbar/> */}
+      </ToggleProvider>
+      <Home/>
     </div>
   );
 }

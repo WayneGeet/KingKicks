@@ -5,7 +5,6 @@ import Plus from "../../images/icon-plus.svg";
 import IconCart from '@mui/icons-material/ShoppingCart';
 import {CartContext} from "../../Context";
 
-
 const Button = () => {
     const [item, setItem] = useContext(CartContext)
     const [count, setCount] = useState(0)
@@ -28,7 +27,7 @@ const Button = () => {
     }
 
     const handleClick = ()=>{
-        setItem(() => count)
+        setItem(count)
     }
   return (
     <div className="b_button">
@@ -46,8 +45,6 @@ const Button = () => {
               className="add">
                 <img src={Plus} alt="add" />
               </button>
-              
-              
           </div>
 
           <div className="b_right" onClick={handleClick}>

@@ -23,9 +23,10 @@ export function RestaurantProvider({children}){
 }
 
 export function ToggleProvider({children}){
-    const [visibility, setVisibility] = useState(false)
+    const [visibility, setVisibility] = useState(false);
+    const [focus, setFocus] = useState(false)
     return(
-        <ToggleContext.Provider value={[visibility, setVisibility]}>
+        <ToggleContext.Provider value={[visibility, setVisibility, focus, setFocus]}>
             {children}
         </ToggleContext.Provider>
     )

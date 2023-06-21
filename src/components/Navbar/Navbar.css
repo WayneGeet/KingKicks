@@ -1,102 +1,175 @@
 .nav{
-    z-index:1000;
-}
-
-.container{
-    max-width:1200px;
-    margin:0 6rem;
-    padding:0 1rem;
-} 
-
-.logo{
-    position:relative;
-    font-family: 'Kanit', sans-serif;
-    font-size:2rem;
-    top:2rem;
-}
-.header{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    position:relative;
-    bottom:1.2rem;
-    border-bottom:1px solid rgb(219, 219, 219);
-    padding-bottom:1rem;
-    position:relative;
-    top:-2.2rem;
+    justify-content:space-evenly;
+    border-bottom:1px solid #2222;
+    box-shadow:0 1px 1px rgba(0,0,0,.1);
+    max-width:1080px;
+    margin:0 auto;
+    padding-inline:2rem;
 }
 
-.main_nav,
-.n_right{
-    display:flex;
-    align-items:center;
-    gap:1.3rem;
-    position:relative;
-    top:0.5rem;
+.cart_item{
+  position:relative;
+  display:flex;
+}
+
+.num_of_items{
+  position:absolute;
+  width:0.9rem;
+  top:0;
+  background-color:orange;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:100%;
+  font-size:small;
+  left:1rem;
+  padding:0.1rem 0.3rem;
+  
+}
+
+.menu{
+    padding-right:0.5rem;
+    display:none;
+}
+
+.close_btn{
+  display:none;
 }
 
 .main_nav{
-    position:relative;
-    left:9rem;
+    display:flex;
+    gap:1.5rem; 
 }
 
-.item{
-    position:relative;
+.nav_fixed{
+  display:flex;
+  gap:1.5rem;
+
 }
 
-.item::after{
+.main_nav li, .nav_fixed li{
+    font-size:0.9rem;
+    cursor:pointer;
+    transition:all 400ms ease-in;
+    max-width:100%;
+    position:relative;
+}
+.main_nav li::after, .nav_fixed li::after{
     position:absolute;
     content:"";
-    bottom:-2.4rem;
-    width:100%;
-    height:4px;
-    background-color:hsl(26, 100%, 55%);
+    top:3.2rem;
     left:0;
-    opacity:0;
-    transition:all ease-in 400ms;
+    height:2px;
+    width:0;
+    background-color:orange;
 }
 
-.item:hover{
-    cursor:pointer;
+.main_nav li:hover::after, .nav_fixed li:hover::after{
+    width:100%;
 }
 
-.item:hover::after{
-    opacity:1;
+.main_nav li:hover, .nav_fixed li:hover{
+  font-weight:bold;
 }
 
 .n_right{
-    justify-content:space-between;
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    flex-grow:1;    
 }
 
-.n_right>.n_image>.profile>img{
-    width:2.7rem;
-    height:2.7rem;
+.n_right .avatar_n{
+    width:3rem;
+    height:3rem;
+    border-radius:100%;
+    overflow:hidden;
+    object-fit:cover;
+    border: 3px solid orange;    
+}
+
+.n_right :nth-child(1){
+    margin-left:auto;
+    cursor:pointer;
     position:relative;
+    padding:0.5rem;
+    font-size:larger
 }
 
-.cart_icon{
-    padding:0.4rem;
-    border-radius:50%;
-    background-color:rgb(228, 142, 175);
-    border:none;
-    color:white;
-}
 
-.n_items{
-    position:absolute;
-    padding:0.4rem;
-    background-color:orange;
-    top:-0.4rem;
-    left:4.2rem;
-    font-size:0.8rem;
-    border-radius:50%;
-    z-index:14;
-}
 
-@media screen and (max-width:400){
+@media screen and (max-width:767px){
+    .nav{
+        margin:0 1rem;
+        z-index:500;
+    }
     .main_nav{
+        position:fixed;
+        top:-15px;
+        left:0;
+        bottom:0;
+        background-color:white;
         display:flex;
         flex-direction:column;
+        z-index:120;
+        box-shadow:10rem 0 4rem rgba(0,0,0,0.6);
 
+      }
+
+      .left_nav{
+        display:flex;
+        align-items:center;
+        gap:1rem;
+      }
+
+      .left_nav .menu{
+        display:block;
+      }
+
+      .main_nav .close_btn{
+        position:relative;
+        right:1.7rem;
+        top:1.5rem;
+        margin-bottom:1.5rem;
+        padding:0.5rem;
+        width:2rem;
+        background:none;
+        border:none;
+        display:block;
+      }
+
+      .nav_fixed{
+        display:none;
+      }
+
+      .main_nav .item{
+        padding-right:10rem;
+        font-weight:bold;
+        position:relative;
+        right:1.4rem;
+      }
+    
+      .nav .menu{
+        display:block;
+      }
+
+      .n_right{
+        align-items: center;
+      }
+
+      .cart_positioner{
+        position:relative;
+        margin-inline:auto;
+        right:-5.7rem;
+        width:fit-content;
+      }
+
+      .main_nav li:hover::after, .nav_fixed li:hover::after{
+        width:0;
     }
+
+      
 }

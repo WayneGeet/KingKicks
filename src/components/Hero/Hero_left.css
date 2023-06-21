@@ -4,21 +4,22 @@
     transform:translateY(2rem);
     overflow: hidden;
     position:relative;
+    margin-left:5rem;
 }
 
 .main_image{
     height:55vh;
     overflow:hidden;
-    object-fit:contain;
     width:100%;
     border-radius:0.7rem;
     cursor:pointer;
+    
 }
 
 .main_image>img{
     width:100%;
     border-radius:0.7rem;
-}
+    }
 
 .select{
     width:100%;
@@ -60,3 +61,11 @@
     width:5.2rem;
     border-radius:0.5rem;
 }
+
+@media screen and (max-width:767px){
+    .left{
+        display:none;
+    }
+}
+
+

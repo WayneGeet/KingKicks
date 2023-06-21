@@ -28,6 +28,7 @@ const Contact = () => {
         console.log(data)
         setRestaurants(()=>data)
     }
+    
     const flyer = (lat, lon) =>{
         mapRef.current.flyTo(lat, lon)
     }
@@ -37,7 +38,7 @@ const Contact = () => {
     
   return (
     <div>
-        <h4 style={{color:"black"}}>this is the contact page</h4>
+        {/* <h4 style={{color:"black"}}>this is the contact page</h4> */}
 
         <article className="map">
             <Map
@@ -52,7 +53,7 @@ const Contact = () => {
                 height:"90vh"
             }}
             mapStyle="mapbox://styles/wayne-geet/cld0c6fb2003314qm2coqihkl"
-            mapboxAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+            mapboxAccessToken="pk.eyJ1Ijoid2F5bmUtZ2VldCIsImEiOiJjbGY1Z3YxemIwa3dlNDBvNHQwdnQ5MndqIn0.vMaKQfodULOneKKcdhyl4g"
             onLoad={()=>{  
                 flyer(lat, lon)}}
             >  
@@ -67,9 +68,6 @@ const Contact = () => {
                 </Marker>
                 )
             })}
-                 
-
-
                 <GeolocateControl/>
                 <FullscreenControl/>
                 <NavigationControl/>

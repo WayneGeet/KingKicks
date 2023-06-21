@@ -12,6 +12,7 @@ const Focus = () => {
     const [count, setCount] = useState(0)
     const [visibility, setVisibility] = useContext(ToggleContext)
     
+    
     const card_imgs = [
         {id:1, value:Pr1},
         {id:2, value:Pr2},
@@ -52,11 +53,16 @@ const Focus = () => {
 
     
   return (
-    <div className={visibility ? "focus": "hidden"}>
-        <div className="close-icon" onClick={handleClose}><CloseIcon/></div>
-        <div className="f_icon">
-            <img src={NextIcon} alt="" className="forward next" onClick={handleForward}/>
-            <img src={NextIcon} style={{transform:"rotate(180deg)"}} alt="" className="backwards next" onClick={handleBackward}/>
+    <div className={visibility ? "focus": "f_hidden"}>
+        <div className="f_close-icon" onClick={handleClose}><CloseIcon/></div>
+        <div className="f-icons">
+            <div className="arrow">
+                <img src={NextIcon} alt="" className="forward next" onClick={handleForward}/>
+            </div>
+            <div className="arrow">
+                <img src={NextIcon} style={{transform:"rotate(180deg)"}} alt="" className="backwards next" onClick={handleBackward}/>
+            </div>
+            
         </div>
         <div className="f_content">
             <div className="centerImg">

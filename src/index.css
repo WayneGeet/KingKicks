@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Kumbh+Sans:wght@400;500;600;700&display=swap');
 
+*{
+  /* margin:0;
+  padding:0; */
+  /* box-sizing:border-box; */
+}
+
 body {
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
@@ -15,4 +21,14 @@ ul{
 a{
   text-decoration:none;
   color:black;
+}
+
+
+
+@media screen and (max-width:767px) {
+  body{
+    background-color:rgb(247, 232, 214);
+  }
+
+  
 }

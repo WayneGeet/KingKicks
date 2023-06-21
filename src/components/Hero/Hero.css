@@ -5,12 +5,16 @@
     position:relative;
     /* background-color:red; */
     gap:7rem;
+    max-width:1080px;
+    justify-content:space-between;
+    margin-inline:auto;
 }
+
 
 /* hero content */
 .right{
-    width:90%;
-    overflow:hidden;
+    width:100%;
+    /* overflow:hidden; */
     position:relative;
     /* top:2rem; */
 }
@@ -30,7 +34,12 @@
 
 .h_info{
     color:hsl(221, 11%, 71%);
-    font-size:1rem;
+    font-size:0.9rem;
+    text-align:justify;
+    width:84%;
+    line-height:1.2rem;
+    letter-spacing:wide;
+
 }
 
 .price{
@@ -63,6 +72,51 @@
     color:hsl(220, 14%, 75%);
 }
 
+
+@media screen and (max-width:767px){
+    .hero{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin-inline:1rem;
+    }
+    .prices{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        position:relative;
+        bottom:1.5rem;
+    }
+
+    .h_info{
+        color:hsl(0, 1%, 62%);
+        font-size:1.1rem;
+        text-align:justify;
+        width:100%;
+        line-height:1.5rem;
+        letter-spacing:2;
+    }
+    .price{
+        font-size:1.7rem;
+    }
+
+    .h_title{
+        font-size:1.9rem;
+    }
+
+    .values{
+        top:0;
+    }
+
+    .initial_price{
+        top:0;
+    }
+
+    .discount{
+        font-size:1rem;
+    }
+    
+}
 
 
 

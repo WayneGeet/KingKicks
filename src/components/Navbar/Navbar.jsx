@@ -1,44 +1,54 @@
 import React, {useState, useContext} from 'react';
-// import Logo from "../../images/logo.svg";
-import ShoppingCart from '@mui/icons-material/ShoppingCart';
+import Logo from "../../images/logo.svg";
 import Avatar from "../../images/image-avatar.png";
+import Close_icon from "../../images/icon-close.svg"
 import "./Navbar.css";
+import Cart_icon from "../../images/icon-cart.svg";
+import menu from "../../images/icon-menu.svg";
 import Cart from "../Cart/Cart";
-import {CartContext} from "../../Context";
-import {Link} from "react-router-dom"
+import {CartContext} from "../../Context"
 
 
 const Navbar = () => {  
-    const [items] = useContext(CartContext);
-    const [opacity, setOpacity] = useState(false);
-    const handleClick = () =>{
-        setOpacity((prevState)=> !prevState)
+    const [toggle, setToggle] = useState(false);
+    const [nav, setNav] = useState(false)
+    const handleCart = ()=>{
+      setToggle(initial => !initial)
     }
+
+    const [...cartItems] = useContext(CartContext);
+    console.log(cartItems[0])
+
 
   return (
     <div className="nav">
-        <div className="container">
-            <span className="logo">Sneakers</span>
+      <div className="left_nav">
+        <div onClick={()=>setNav(true)} className="menu"><img src={menu} alt="hambuger menu" /></div>
+        <div className="logo"><img src={Logo} alt="" /></div>
+      </div>
+        
+        <ul className={`${nav ? "main_nav": "nav_fixed "}`}>
+            <button onClick={()=>setNav(false)} type="button" className="close_btn"><img src={Close_icon} alt="" /></button>
+            <li className="item">Collection</li>
+            <li className="item">Men</li>
+            <li className="item">Women</li>
+            <li className="item">About</li>
+            <li className="item">Contact</li>
+        </ul>
 
-            <div className="header">
-                <ul className="main_nav">
-                    <li className="item"><Link to="/">Collection</Link></li>
-                    <li className="item"><Link to="/men">Men</Link></li>
-                    <li className="item"><Link to="/women">Women</Link></li>
-                    <li className="item"><Link to="/about">About</Link></li>
-                    <li className="item"><Link to="/contact">Contact</Link></li>
-                </ul>
-
-                <ul className="n_right">
-                    
-                    <li className="cart_icon" onClick={handleClick} style={{cursor:"pointer"}}>
-                        <span className="n_items">{items}</span>
-                        <ShoppingCart/></li>
-                    <li className="n_image"><span className= "profile"><img src={Avatar} alt="Profile" /></span></li>
-                </ul>
-            </div>
+        <ul className="n_right">
+          <div className="cart_item">
+            <img className="cart_icon_n" onClick={handleCart} src={Cart_icon} alt="cart icon" />
+            <div className="num_of_items">{cartItems[0]}</div>
+          </div>
+            
+            <img className="avatar_n" src={Avatar} alt="Profile" />
+        </ul>
+        <div className="cart_positioner">
+          <Cart cartToggler={toggle}></Cart>
         </div>
-        <Cart value={opacity}/>
+        
+        
     </div>
   )
 }
