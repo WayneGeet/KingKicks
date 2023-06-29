@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/KingKicks/static/css/main.e4c70278.css",
+    "main.js": "/KingKicks/static/js/main.98fdcb0a.js",
+    "static/js/483.0795c295.chunk.js": "/KingKicks/static/js/483.0795c295.chunk.js",
+    "static/media/image-product-2.jpg": "/KingKicks/static/media/image-product-2.c8bb0aaccecdebb16596.jpg",
+    "static/media/image-product-1.jpg": "/KingKicks/static/media/image-product-1.520cc50bd13955f55cb2.jpg",
+    "static/media/image-product-3.jpg": "/KingKicks/static/media/image-product-3.af5c71ba9ffcc0b8b54d.jpg",
+    "static/media/image-product-4.jpg": "/KingKicks/static/media/image-product-4.9962862ef3eff6d65e5b.jpg",
+    "static/media/logo.svg": "/KingKicks/static/media/logo.4fe9c1e86cf9bf600f0c239f6a6e5317.svg",
+    "index.html": "/KingKicks/index.html",
+    "static/media/icon-cart.svg": "/KingKicks/static/media/icon-cart.539ec608f50e707c94d583ec11acf99d.svg",
+    "static/media/icon-plus.svg": "/KingKicks/static/media/icon-plus.b297868c5f938612f4f099f9f9d73aea.svg",
+    "static/media/icon-minus.svg": "/KingKicks/static/media/icon-minus.f5073aa8273785ecf6b7811630782736.svg",
+    "static/media/icon-close.svg": "/KingKicks/static/media/icon-close.7ef3227fd5c03a50480dd8170754ec86.svg",
+    "static/media/icon-menu.svg": "/KingKicks/static/media/icon-menu.c6107d03f1edcf73523ebd8cbc50a443.svg",
+    "static/media/icon-next.svg": "/KingKicks/static/media/icon-next.9621183a551a9985b4bd7536c9a69c66.svg",
+    "main.e4c70278.css.map": "/KingKicks/static/css/main.e4c70278.css.map",
+    "main.98fdcb0a.js.map": "/KingKicks/static/js/main.98fdcb0a.js.map",
+    "483.0795c295.chunk.js.map": "/KingKicks/static/js/483.0795c295.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4c70278.css",
+    "static/js/main.98fdcb0a.js"
+  ]
+}
